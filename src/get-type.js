@@ -1,5 +1,4 @@
 export function getType(item) {
-
 	if (typeof item === 'string') {
 		return 'string';
 	}

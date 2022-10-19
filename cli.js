@@ -3,7 +3,6 @@ import process from 'node:process';
 import {parse} from 'node:path';
 import meow from 'meow';
 import chalk from 'chalk';
-import * as YAML from 'yaml';
 import {globby} from 'globby';
 import {toOpenApi, readJson, writeYaml} from './src/index.js';
 

@@ -15,6 +15,7 @@ export function toOpenApi(item) {
 			for (const [key, value] of Object.entries(item)) {
 				oa.properties[key] = toOpenApi(value);
 			}
+
 			break;
 		case 'array':
 			return {
@@ -25,6 +26,7 @@ export function toOpenApi(item) {
 			if (item < 2_147_483_647 && item > -2_147_483_647) {
 				return {type: 'integer', format: 'int32', example: item};
 			}
+
 			return {type: 'integer', format: Number.isSafeInteger(item) ? 'int64' : 'unsafe', example: item};
 		case 'number':
 			return {type: 'number', example: item};
@@ -33,7 +35,7 @@ export function toOpenApi(item) {
 		case 'string':
 			return {type: 'string', example: item};
 		default:
-			return {type: 'string', format: 'nullable'}
+			return {type: 'string', format: 'nullable'};
 	}
 
 	return oa;

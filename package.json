@@ -1,8 +1,12 @@
 {
 	"name": "mock-to-openapi",
-	"version": "1.0.0",
-	"description": "Cli application (and library) to convert JSON mock objects to OpenAPI schema",
+	"version": "v1.0.0",
+	"description": "Cli tool (and library) to convert JSON mock objects to OpenAPI schema",
 	"type": "module",
+	"exports": "./src/index.js",
+	"license": "MIT",
+	"homepage": "https://ozana.cz",
+	"bugs": "https://github.com/OzzyCzech/mock-to-openapi/issues",
 	"author": {
 		"name": "Roman Ožana",
 		"email": "roman@ozana.cz",
@@ -11,7 +15,20 @@
 	"bin": {
 		"mock-to-openapi": "cli.js"
 	},
-	"license": "MIT",
+	"engines": {
+		"node": ">=14"
+	},
+	"keywords": [
+		"openapi",
+		"converter",
+		"swagger",
+		"yaml",
+		"json",
+		"cli"
+	],
+	"scripts": {
+		"test": "xo"
+	},
 	"private": false,
 	"dependencies": {
 		"chalk": "^5.1.2",
@@ -21,5 +38,14 @@
 	},
 	"devDependencies": {
 		"xo": "^0.52.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:OzzyCzech/mock-to-openapi.git"
+	},
+	"xo": {
+		"rules": {
+			"no-await-in-loop": 0
+		}
 	}
 }
