@@ -1,3 +1,12 @@
+/**
+ * Convert javascript variable to OpenAPI data types
+ *
+ * @see https://swagger.io/docs/specification/data-models/data-types/
+ * string, number, integer, boolean, array, object
+ *
+ * @param item
+ * @returns {string|string}
+ */
 export function getType(item) {
 	if (typeof item === 'string') {
 		return 'string';

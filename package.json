@@ -1,7 +1,7 @@
 {
 	"name": "mock-to-openapi",
 	"version": "1.0.1",
-	"description": "Cli tool (and library) to convert JSON mock objects to OpenAPI schema",
+	"description": "Cli tool (and library) for converting JSON mock objects to Open API schemas",
 	"type": "module",
 	"exports": "./src/index.js",
 	"license": "MIT",
