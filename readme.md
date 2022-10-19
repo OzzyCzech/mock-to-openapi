@@ -1,4 +1,4 @@
-# JSON to OpenAPI converter
+# JSON mock to OpenAPI converter
 
 Cli tool (and library) for converting JSON mock objects to [Open API schemas](https://swagger.io/specification/).
 
