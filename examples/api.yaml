@@ -1,0 +1,42 @@
+# https://swagger.io/docs/specification/about/
+# https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md
+
+openapi: 3.0.3
+
+info:
+  title: "Example API"
+  description: This is just an example API
+  version: 1.0.0
+  contact:
+    email: roman@ozana.cz
+
+servers:
+  - url: https://ozana.cz/
+    description: Example
+
+paths:
+  /user:
+    get:
+      operationId: Get User
+      description: Retrieve User
+      security:
+        - ApiKey: [ ]
+      tags:
+        - User
+      responses:
+        200:
+          description: List of Project Areas/Groups
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: schemas/User.yaml
+
+components:
+  securitySchemes:
+    ApiKey:
+      description: This is just ApiKey
+      type: apiKey
+      name: apiKey
+      in: query

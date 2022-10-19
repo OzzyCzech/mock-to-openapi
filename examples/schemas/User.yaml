@@ -1,0 +1,71 @@
+type: object
+properties:
+  name:
+    type: string
+    example: Roman Ožana
+  email:
+    type: string
+    example: roman@testomato.com
+  phone:
+    type: string
+    format: nullable
+  tags:
+    type: array
+    items:
+      type: string
+      example: admin
+  role:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+        example: 4
+      name:
+        type: string
+        example: admin
+      systemRole:
+        type: boolean
+        example: true
+      permissions:
+        type: object
+        properties:
+          read:
+            type: boolean
+            example: true
+          write:
+            type: boolean
+            example: true
+          run:
+            type: boolean
+            example: false
+          edit:
+            type: boolean
+            example: true
+  address:
+    type: object
+    properties:
+      street:
+        type: string
+        example: Budějovická
+      country:
+        type: string
+        example: Czech Republic
+      city:
+        type: string
+        example: Prague
+      zip:
+        type: integer
+        format: int32
+        example: 14000
+  messages:
+    type: array
+    items:
+      type: object
+      properties:
+        message:
+          type: string
+          example: This is message
+        type:
+          type: string
+          example: info

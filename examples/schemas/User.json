@@ -1,0 +1,33 @@
+{
+	"name": "Roman Ožana",
+	"email": "roman@testomato.com",
+	"phone": null,
+	"tags": ["admin", "read", "run", "write"],
+	"role": {
+		"id": 4,
+		"name": "admin",
+		"systemRole": true,
+		"permissions": {
+			"read": true,
+			"write": true,
+			"run": false,
+			"edit": true
+		}
+	},
+	"address": {
+		"street": "Budějovická",
+		"country": "Czech Republic",
+		"city": "Prague",
+		"zip": 14000
+	},
+	"messages": [
+		{
+			"message": "This is message",
+			"type": "info"
+		},
+		{
+			"message": "This is another message",
+			"type": "info"
+		}
+	]
+}

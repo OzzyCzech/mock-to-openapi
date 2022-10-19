@@ -1,0 +1,25 @@
+{
+	"name": "mock-to-openapi",
+	"version": "1.0.0",
+	"description": "Cli application (and library) to convert JSON mock objects to OpenAPI schema",
+	"type": "module",
+	"author": {
+		"name": "Roman Ožana",
+		"email": "roman@ozana.cz",
+		"url": "https://ozana.cz/"
+	},
+	"bin": {
+		"mock-to-openapi": "cli.js"
+	},
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"chalk": "^5.1.2",
+		"globby": "^13.1.2",
+		"meow": "^11.0.0",
+		"yaml": "^2.1.3"
+	},
+	"devDependencies": {
+		"xo": "^0.52.4"
+	}
+}
