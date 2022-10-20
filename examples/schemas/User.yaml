@@ -5,7 +5,7 @@ properties:
     example: Roman Ožana
   email:
     type: string
-    example: roman@testomato.com
+    example: roman@ozana.cz
   phone:
     type: string
     format: nullable
@@ -69,3 +69,4 @@ properties:
         type:
           type: string
           example: info
+          format: byte
