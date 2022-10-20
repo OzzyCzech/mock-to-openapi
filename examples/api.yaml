@@ -25,14 +25,28 @@ paths:
         - User
       responses:
         200:
-          description: List of Project Areas/Groups
+          description: Retrieve User object
+          content:
+            application/json:
+              schema:
+                $ref: schemas/User.yaml
+  /articles:
+    get:
+      operationId: Get Article
+      description: Retrieve Article
+      security:
+        - ApiKey: [ ]
+      tags:
+        - Article
+      responses:
+        200:
+          description: Retrieve Article object
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: schemas/User.yaml
-
+                  $ref: schemas/Article.yaml
 components:
   securitySchemes:
     ApiKey:

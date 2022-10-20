@@ -68,5 +68,5 @@ properties:
           example: This is message
         type:
           type: string
-          example: info
           format: byte
+          example: info

@@ -1,0 +1,15 @@
+type: object
+properties:
+  title:
+    type: string
+    example: This is title
+  author:
+    type: string
+    example: Roman Ožana
+  content:
+    type: string
+    example: This is just an example
+  date:
+    type: string
+    format: date-time
+    example: 2020-05-12T23:50:21.817Z

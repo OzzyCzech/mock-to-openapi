@@ -27,7 +27,8 @@
 		"cli"
 	],
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava",
+		"examples": "./cli.js ./examples"
 	},
 	"private": false,
 	"dependencies": {
