@@ -28,7 +28,6 @@ export function getFormat(item) {
 	}
 
 	if (getType(item) === 'string') {
-
 		// Date and time detection
 		if (!Number.isNaN(Date.parse(item))) {
 			return Number.isNaN(Date.parse(item + ' 00:00:00 GMT')) ? 'date-time' : 'date';
