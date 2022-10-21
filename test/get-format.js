@@ -33,3 +33,10 @@ test('Base64 data', t => {
 	const base64 = getFormat('ZXhhbXBsZQ==');
 	t.is(base64, 'byte');
 });
+
+test('Regular string', t => {
+	const base64 = getFormat('week');
+
+	console.log('it is', base64);
+	t.is(base64, undefined);
+});

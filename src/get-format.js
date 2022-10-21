@@ -1,4 +1,15 @@
+import {Buffer} from 'node:buffer';
 import {getType} from './get-type.js';
+
+/**
+ * Detect base64 string
+ * @param str
+ * @returns {boolean}
+ */
+function isBase64(string_) {
+	const dec = Buffer.from(string_, 'base64').toString('utf8');
+	return string_ === Buffer.from(dec, 'binary').toString('base64');
+}
 
 /**
  * Detect format
@@ -23,8 +34,7 @@ export function getFormat(item) {
 		}
 
 		// Base64 encoded data
-		const b64 = /^([A-Za-z\d+/]{4})*([A-Za-z\d+/]{3}=|[A-Za-z\d+/]{2}==)?$/;
-		if (b64.test(item)) {
+		if (isBase64(item)) {
 			return 'byte';
 		}
 	}
