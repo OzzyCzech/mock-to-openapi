@@ -10,7 +10,7 @@
 	"author": {
 		"name": "Roman Ožana",
 		"email": "roman@ozana.cz",
-		"url": "https://ozana.cz/"
+		"url": "https://ozana.cz"
 	},
 	"bin": {
 		"mock-to-openapi": "cli.js"
