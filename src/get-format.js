@@ -1,6 +1,6 @@
 import {Buffer} from 'node:buffer';
-import {getType} from './get-type.js';
 import {DateTime} from 'luxon';
+import {getType} from './get-type.js';
 
 /**
  * Detect base64 string
@@ -29,22 +29,20 @@ export function getFormat(item) {
 	}
 
 	if (getType(item) === 'string') {
-
 		if (!Number.isNaN(Date.parse(item))) {
-
 			if (
-				DateTime.fromFormat(item, 'yyyy').isValid ||
-				DateTime.fromFormat(item, 'yyyy-MM').isValid ||
-				DateTime.fromFormat(item, 'yyyy-MM-dd').isValid
+				DateTime.fromFormat(item, 'yyyy').isValid
+				|| DateTime.fromFormat(item, 'yyyy-MM').isValid
+				|| DateTime.fromFormat(item, 'yyyy-MM-dd').isValid
 			) {
 				return 'date';
 			}
 
 			if (
-				DateTime.fromSQL(item).isValid ||
-				DateTime.fromISO(item).isValid ||
-				DateTime.fromHTTP(item).isValid ||
-				DateTime.fromRFC2822(item).isValid
+				DateTime.fromSQL(item).isValid
+				|| DateTime.fromISO(item).isValid
+				|| DateTime.fromHTTP(item).isValid
+				|| DateTime.fromRFC2822(item).isValid
 			) {
 				return 'date-time';
 			}
