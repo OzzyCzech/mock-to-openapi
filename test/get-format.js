@@ -15,15 +15,17 @@ test('Big (unsafe) integer', t => {
 });
 
 test('Date and time string', t => {
-	t.is(getFormat('2022-10-21T12:01:00.900Z'), 'date-time');
-	t.is(getFormat('2022-10-21 12:01:00.000000'), 'date-time');
+	t.is(getFormat('2022-10-21T12:01:00.900Z'), 'date-time'); // ISO 8601
+	t.is(getFormat('2022-10-21 12:01:00.000000'), 'date-time'); // SQL
+	t.is(getFormat('2022-10-21 12:01:00'), 'date-time'); // SQL without millis
+	t.is(getFormat('Sunday, 06-Nov-94 08:49:37 GMT'), 'date-time'); //  HTTP
+	t.is(getFormat('Tue, 01 Nov 2016 13:23:12 +0630'), 'date-time'); //  RFC2822
 });
 
 test('Date without time', t => {
-	t.is(getFormat('2015'), 'date');
-	t.is(getFormat('1981-09-16'), 'date');
-	t.is(getFormat('2015/03/25'), 'date');
-	t.is(getFormat('March 21, 2012'), 'date');
+	t.is(getFormat('2022'), 'date');
+	t.is(getFormat('2022-01'), 'date');
+	t.is(getFormat('2017-05-15'), 'date');
 });
 
 test('Base64 data', t => {
@@ -31,5 +33,8 @@ test('Base64 data', t => {
 });
 
 test('Regular string', t => {
+	t.is(getFormat('some string'), undefined);
+	t.is(getFormat('7'), undefined);
 	t.is(getFormat('week'), undefined);
+	t.is(getFormat(''), undefined);
 });
