@@ -7,6 +7,10 @@
 	"license": "MIT",
 	"homepage": "https://ozana.cz",
 	"bugs": "https://github.com/OzzyCzech/mock-to-openapi/issues",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:OzzyCzech/mock-to-openapi.git"
+	},
 	"author": {
 		"name": "Roman Ožana",
 		"email": "roman@ozana.cz",
@@ -41,10 +45,6 @@
 	"devDependencies": {
 		"ava": "^4.3.3",
 		"xo": "^0.52.4"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:OzzyCzech/mock-to-openapi.git"
 	},
 	"xo": {
 		"rules": {

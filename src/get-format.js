@@ -4,12 +4,12 @@ import {getType} from './get-type.js';
 
 /**
  * Detect base64 string
- * @param str
  * @returns {boolean}
+ * @param string
  */
-function isBase64(string_) {
-	const dec = Buffer.from(string_, 'base64').toString('utf8');
-	return string_ === Buffer.from(dec, 'binary').toString('base64');
+function isBase64(string) {
+	const dec = Buffer.from(string, 'base64').toString('utf8');
+	return string === Buffer.from(dec, 'binary').toString('base64');
 }
 
 /**
