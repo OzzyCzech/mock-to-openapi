@@ -6,7 +6,6 @@
   "exports": "./src/index.js",
   "license": "MIT",
   "repository": "OzzyCzech/mock-to-openapi",
-  "homepage": "https://ozana.cz",
   "author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
   "bin": {
     "mock-to-openapi": "cli.js"
