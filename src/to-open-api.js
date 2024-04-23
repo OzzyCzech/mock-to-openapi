@@ -14,7 +14,7 @@ export function toOpenApi(item) {
 	const example = item;
 
 	switch (type) {
-		case 'object':
+		case 'object': {
 			oa.type = 'object';
 			oa.properties = {};
 			for (const [key, value] of Object.entries(item)) {
@@ -22,18 +22,31 @@ export function toOpenApi(item) {
 			}
 
 			break;
-		case 'array':
+		}
+
+		case 'array': {
 			return {type, items: toOpenApi(item[0])};
-		case 'integer':
+		}
+
+		case 'integer': {
 			return {type, format, example};
-		case 'number':
+		}
+
+		case 'number': {
 			return {type, example};
-		case 'boolean':
+		}
+
+		case 'boolean': {
 			return {type, example};
-		case 'string':
+		}
+
+		case 'string': {
 			return format ? {type, format, example} : {type, example};
-		default:
+		}
+
+		default: {
 			return {type: 'string', format: 'nullable'};
+		}
 	}
 
 	return oa;
