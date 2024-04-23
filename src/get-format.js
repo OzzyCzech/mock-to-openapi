@@ -32,17 +32,17 @@ export function getFormat(item) {
 		if (!Number.isNaN(Date.parse(item))) {
 			if (
 				DateTime.fromFormat(item, 'yyyy').isValid
-				|| DateTime.fromFormat(item, 'yyyy-MM').isValid
-				|| DateTime.fromFormat(item, 'yyyy-MM-dd').isValid
+        || DateTime.fromFormat(item, 'yyyy-MM').isValid
+        || DateTime.fromFormat(item, 'yyyy-MM-dd').isValid
 			) {
 				return 'date';
 			}
 
 			if (
 				DateTime.fromSQL(item).isValid
-				|| DateTime.fromISO(item).isValid
-				|| DateTime.fromHTTP(item).isValid
-				|| DateTime.fromRFC2822(item).isValid
+        || DateTime.fromISO(item).isValid
+        || DateTime.fromHTTP(item).isValid
+        || DateTime.fromRFC2822(item).isValid
 			) {
 				return 'date-time';
 			}
