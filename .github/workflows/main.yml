@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    name: Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [ 20, 21 ]
+        os:
+          - ubuntu-latest
+          - macos-latest
+          # Windows fails and I don't have time to look into it. PR welcome.
+          # - windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: yarn install --ignore-engines
+      - name: Test
+        run: yarn test
