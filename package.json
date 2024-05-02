@@ -10,9 +10,6 @@
   "bin": {
     "mock-to-openapi": "cli.js"
   },
-  "engines": {
-    "node": ">=20"
-  },
   "keywords": [
     "openapi",
     "converter",
