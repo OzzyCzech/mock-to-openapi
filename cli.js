@@ -19,8 +19,8 @@ const cli = meow(`
 	  	  
 `, {
 	importMeta: import.meta, flags: {
-		verbose: {type: 'boolean', alias: 'v'},
-		write: {type: 'boolean', default: true, alias: 'w'},
+		verbose: {type: 'boolean', shortFlag: 'v'},
+		write: {type: 'boolean', default: true, shortFlag: 'w'},
 	},
 });
 
