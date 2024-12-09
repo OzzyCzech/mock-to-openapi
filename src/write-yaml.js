@@ -1,7 +1,7 @@
-import {mkdir, writeFile as writeFileAsync} from 'node:fs/promises';
-import {existsSync} from 'node:fs';
-import {dirname} from 'node:path';
-import * as YAML from 'yaml';
+import { existsSync } from "node:fs";
+import { mkdir, writeFile as writeFileAsync } from "node:fs/promises";
+import { dirname } from "node:path";
+import * as YAML from "yaml";
 
 /**
  * Write content to the file and create directory if not exists
@@ -12,7 +12,7 @@ import * as YAML from 'yaml';
  */
 export async function writeYaml(file, content) {
 	if (!existsSync(dirname(file))) {
-		await mkdir(dirname(file), {recursive: true});
+		await mkdir(dirname(file), { recursive: true });
 	}
 
 	return writeFileAsync(file, YAML.stringify(content));

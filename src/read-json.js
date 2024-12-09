@@ -1,4 +1,4 @@
-import {readFile as readFileAsync} from 'node:fs/promises';
+import { readFile as readFileAsync } from "node:fs/promises";
 
 /**
  * Read file content as string
@@ -6,5 +6,5 @@ import {readFile as readFileAsync} from 'node:fs/promises';
  * @returns {Promise<*>}
  */
 export async function readJson(path) {
-	return JSON.parse(await readFileAsync(path, 'utf8'));
+	return JSON.parse(await readFileAsync(path, "utf8"));
 }

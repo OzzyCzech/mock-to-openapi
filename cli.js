@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-import process from 'node:process';
-import {parse} from 'node:path';
-import meow from 'meow';
-import chalk from 'chalk';
-import {globby} from 'globby';
-import {toOpenApi, readJson, writeYaml} from './src/index.js';
+import parse from "node:path";
+import { process } from "node:process";
+import chalk from "chalk";
+import { globby } from "globby";
+import meow from "meow";
+import { readJson, toOpenApi, writeYaml } from "./src/index.js";
 
-const cli = meow(`
+const cli = meow(
+	`
 	Usage
 	  $ mock-to-openapi <input> <output>
 	  
@@ -17,26 +18,29 @@ const cli = meow(`
 	Examples
 	  $ mock-to-openapi ~/Downloads/*.json ~/Downloads/API
 	  	  
-`, {
-	importMeta: import.meta, flags: {
-		verbose: {type: 'boolean', shortFlag: 'v'},
-		write: {type: 'boolean', default: true, shortFlag: 'w'},
+`,
+	{
+		importMeta: import.meta,
+		flags: {
+			verbose: { type: "boolean", shortFlag: "v" },
+			write: { type: "boolean", default: true, shortFlag: "w" },
+		},
 	},
-});
+);
 
 // Check if input was set
 if (cli.input.length === 0) {
 	cli.showHelp(2);
 }
 
-const verbose = message => {
+const verbose = (message) => {
 	if (cli.flags.verbose) {
 		console.log(chalk.gray(message));
 	}
 };
 
 // Search for json files
-const files = await globby(cli.input[0], {expandDirectories: {extensions: ['json']}});
+const files = await globby(cli.input[0], { expandDirectories: { extensions: ["json"] } });
 
 // Process JSON files
 if (files.length > 0) {
@@ -57,6 +61,6 @@ if (files.length > 0) {
 
 	console.log(chalk.green(`Done! ${files.length} JSON file(s) successfully processed`));
 } else {
-	console.error(chalk.red('ERROR: I didn\'t find any json files'));
+	console.error(chalk.red("ERROR: I didn't find any json files"));
 	process.exit(1);
 }
