@@ -10,7 +10,14 @@
 	"bin": {
 		"mock-to-openapi": "cli.js"
 	},
-	"keywords": ["openapi", "converter", "swagger", "yaml", "json", "cli"],
+	"keywords": [
+		"openapi",
+		"converter",
+		"swagger",
+		"yaml",
+		"json",
+		"cli"
+	],
 	"scripts": {
 		"test": "ava",
 		"format": "biome format --write",
