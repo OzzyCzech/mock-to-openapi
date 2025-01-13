@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import parse from "node:path";
-import { process } from "node:process";
+import process from "node:process";
 import chalk from "chalk";
 import { globby } from "globby";
 import meow from "meow";
