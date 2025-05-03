@@ -1,41 +1,48 @@
 {
-	"name": "mock-to-openapi",
-	"version": "1.1.4",
-	"description": "Cli tool (and library) for converting JSON mock objects to Open API schemas",
-	"type": "module",
-	"exports": "./src/index.js",
-	"license": "MIT",
-	"repository": "OzzyCzech/mock-to-openapi",
-	"author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
-	"bin": {
-		"mock-to-openapi": "cli.js"
-	},
-	"keywords": [
-		"openapi",
-		"converter",
-		"swagger",
-		"yaml",
-		"json",
-		"cli"
-	],
-	"scripts": {
-		"test": "ava",
-		"format": "biome format --write",
-		"lint": "biome lint",
-		"release": "np",
-		"examples": "./cli.js ./examples"
-	},
-	"private": false,
-	"dependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"chalk": "^5.4.1",
-		"globby": "^14.0.2",
-		"luxon": "^3.5.0",
-		"meow": "^13.2.0",
-		"yaml": "^2.7.0"
-	},
-	"devDependencies": {
-		"ava": "^6.2.0",
-		"np": "^10.1.0"
-	}
+  "name": "mock-to-openapi",
+  "version": "1.1.4",
+  "description": "Cli tool (and library) for converting JSON mock objects to Open API schemas",
+  "type": "module",
+  "exports": "./src/index.js",
+  "license": "MIT",
+  "repository": "OzzyCzech/mock-to-openapi",
+  "author": "Roman Ožana <roman@ozana.cz> (https://ozana.cz)",
+  "bin": {
+    "mock-to-openapi": "cli.js"
+  },
+  "keywords": [
+    "openapi",
+    "converter",
+    "swagger",
+    "yaml",
+    "json",
+    "cli"
+  ],
+  "scripts": {
+    "test": "ava",
+    "format": "biome format --write",
+    "lint": "biome lint",
+    "release": "np",
+    "examples": "./cli.js ./examples",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "private": false,
+  "dependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "chalk": "^5.4.1",
+    "globby": "^14.0.2",
+    "luxon": "^3.5.0",
+    "meow": "^13.2.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "ava": "^6.2.0",
+    "gh-pages": "^6.3.0",
+    "np": "^10.2.0",
+    "vite": "^6.3.4",
+    "vite-plugin-node-polyfills": "^0.23.0"
+  }
 }
