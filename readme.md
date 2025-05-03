@@ -34,10 +34,10 @@ Let's have, for example, `json` object with:
 
 ```json
 {
-  "title": "This is title",
-  "author": "Roman Ožana",
-  "content": "This is just an example",
-  "date": "2020-05-12T23:50:21.817Z"
+	"title": "This is title",
+	"author": "Roman Ožana",
+	"content": "This is just an example",
+	"date": "2020-05-12T23:50:21.817Z"
 }
 ```
 
