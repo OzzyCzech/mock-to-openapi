@@ -11,6 +11,7 @@ export default defineConfig({
 			},
 		}),
 	],
+	base: "/mock-to-openapi/",
 	build: {
 		outDir: "dist",
 	},
