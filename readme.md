@@ -11,7 +11,7 @@ Cli tool (and library) for converting JSON mock objects to [OpenAPI schemas](htt
 ## Install
 
 ```shell
-npm install --global mock-to-openapi 
+npm install --global mock-to-openapi
 ```
 
 ## Usage
@@ -21,6 +21,12 @@ Following command will convert all `*.json` files from directory `./examples` to
 ```shell
 mock-to-openapi ./examples
 ```
+
+## Web Interface
+
+You can use the online web interface to convert JSON mock objects to OpenAPI schemas directly in your browser:
+
+[https://ozyczeсh.github.io/mock-to-openapi/](https://ozyczeсh.github.io/mock-to-openapi/)
 
 ## Example
 
