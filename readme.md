@@ -16,7 +16,8 @@ npm install --global mock-to-openapi
 
 ## Usage
 
-Following command will convert all `*.json` files from directory `./examples` to YAML [OpenAPI](https://swagger.io/specification/) schemas.
+Following command will convert all `*.json` files from directory `./examples` to
+YAML [OpenAPI](https://swagger.io/specification/) schemas.
 
 ```shell
 mock-to-openapi ./examples
@@ -26,7 +27,7 @@ mock-to-openapi ./examples
 
 You can use the online web interface to convert JSON mock objects to OpenAPI schemas directly in your browser:
 
-[https://ozyczeсh.github.io/mock-to-openapi/](https://ozyczeсh.github.io/mock-to-openapi/)
+https://ozzyczech.github.io/mock-to-openapi/
 
 ## Example
 
