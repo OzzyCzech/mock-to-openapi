@@ -1,16 +1,14 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
 	"files": {
-		"ignore": ["examples/**/*.*", "package.json"]
+		"includes": ["**", "!**/examples/**/*.*", "!**/package.json"]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
 		"lineWidth": 240
 	},
-	"organizeImports": {
-		"enabled": true
-	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
 		"enabled": true
 	}
