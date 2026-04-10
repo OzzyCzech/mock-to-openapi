@@ -12,8 +12,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: write      # for GitHub Release
-      id-token: write      # required for OIDC trusted publishing
+      contents: write # for GitHub Release
+      id-token: write # required for OIDC trusted publishing
     steps:
       - uses: actions/checkout@v6
 
