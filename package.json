@@ -32,7 +32,6 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
-  "packageManager": "pnpm@10.33.0",
   "private": false,
   "dependencies": {
     "@biomejs/biome": "^2.4.11",
