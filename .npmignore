@@ -1,2 +1,8 @@
-examples
-.github
+# Ignore everything
+*
+
+# Allow only what the package needs
+!src/
+!src/**
+!cli.js
+!readme.md

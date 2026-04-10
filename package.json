@@ -5,7 +5,10 @@
   "type": "module",
   "exports": "./src/index.js",
   "license": "MIT",
-  "repository": "OzzyCzech/mock-to-openapi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OzzyCzech/mock-to-openapi.git"
+  },
   "author": "Roman Ozana <roman@ozana.cz> (https://ozana.cz)",
   "bin": {
     "mock-to-openapi": "cli.js"
@@ -43,5 +46,8 @@
     "vite": "^8.0.8",
     "vite-plugin-node-polyfills": "^0.26.0",
     "vitest": "^4.1.4"
+  },
+  "resolutions": {
+    "picomatch": ">=4.0.4"
   }
 }
