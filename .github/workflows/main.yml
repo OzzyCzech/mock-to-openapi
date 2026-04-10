@@ -19,14 +19,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          cache: yarn
-      - run: yarn install --frozen-lockfile
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - name: Code quality
-        run: yarn biome ci .
+        run: pnpm biome ci .
       - name: Test
-        run: yarn test
+        run: pnpm test
       - name: Try examples
-        run: yarn examples
+        run: pnpm examples

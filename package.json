@@ -32,6 +32,7 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
+  "packageManager": "pnpm@10.33.0",
   "private": false,
   "dependencies": {
     "@biomejs/biome": "^2.4.11",
@@ -47,7 +48,9 @@
     "vite-plugin-node-polyfills": "^0.26.0",
     "vitest": "^4.1.4"
   },
-  "resolutions": {
-    "picomatch": ">=4.0.4"
+  "pnpm": {
+    "overrides": {
+      "picomatch": ">=4.0.4"
+    }
   }
 }
