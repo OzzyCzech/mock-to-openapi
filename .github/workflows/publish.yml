@@ -27,7 +27,7 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build --if-present
+      - run: pnpm build
       - run: pnpm test
 
       - name: Publish to npm
