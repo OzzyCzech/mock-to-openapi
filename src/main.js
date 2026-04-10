@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				copyYamlBtn.classList.remove("btn-success");
 				copyYamlBtn.classList.add("btn-secondary");
 			}, 1500);
-		} catch (_err) {
+		} catch {
 			// Fallback for browsers that don't support clipboard API
 			yamlOutput.select();
 			document.execCommand("copy");
